@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 
-const style = {
+const menus = {
+    position: 'absolute',
+    width: '60px',
+    height: '400px',
+    top: '19%',
+    right: '23%'
+}
+
+const tabs = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -12,12 +20,14 @@ const style = {
     borderRadius: '5px'
 }
 
-function MenuTabs(props) {
+function MenuTab(props) {
     const [isCurrent, setIsCurrent] = useState(false);
     
     return (
-        <div style={style}>홈</div>
+        <div style={menus}>
+            <div style={tabs}>홈</div>
+        </div>
     );
 }
 
-export default MenuTabs;
+export default MenuTab;
