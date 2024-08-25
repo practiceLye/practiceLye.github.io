@@ -6,7 +6,7 @@ const Menus = styled.div`
     width: 60px;
     height: 400px;
     top: 19%;
-    right: 23%;
+    right: 21%;
 `
 
 const Tab = styled.div`
