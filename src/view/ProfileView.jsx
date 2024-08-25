@@ -10,9 +10,17 @@ const ProfileContent = styled.div`
 
 const TodayMood = styled.div`
     margin-top: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     width: 65%;
     height: 5%;
     border: 2px solid rgba(0, 0, 0, 0.05);
+    & span {
+        font-size: 0.7rem;
+        font-weight: 500;
+        margin-left: 0.5rem;
+    }
 `
 
 const ProfileImage = styled.div`
@@ -25,7 +33,9 @@ const ProfileImage = styled.div`
 function ProfileView(props) {
     return (
         <ProfileContent>
-            <TodayMood>TODAY IS ...</TodayMood>
+            <TodayMood>
+                <span>TODAY IS ..</span>
+            </TodayMood>
             <ProfileImage></ProfileImage>
         </ProfileContent>
     );

@@ -10,11 +10,6 @@ const MainContainer = styled.div`
 `
 
 const DiaryCover = styled.div`
-    ${(props) => 
-        props.isLeft && 
-        css`
-            margin-left: 3%;
-        `}
     background-color: rgba(255, 255, 255, 0.2);
     width: ${(props) => props.isLeft ? '25%' : '70%'};
     height: 90%;
@@ -22,7 +17,14 @@ const DiaryCover = styled.div`
     align-items: center;
     border: 2px solid rgb(255, 175, 175);
     border-radius: 10px;
-    border-right: 0;
+    ${(props) => 
+        props.isLeft ?
+        css`
+            margin-left: 3%;
+            border-right: 0;
+        `: css`
+            border-left: 0;
+        `}
 `
 
 const DottedOutLine = styled.div`
@@ -31,10 +33,17 @@ const DottedOutLine = styled.div`
     height: 90%;
     display: flex;
     align-items: center;
-    margin-left: auto;
     border: 2px dashed white;
-    border-right: 0;
     border-radius: 10px;
+    ${(props) => 
+        props.isLeft ?
+        css`
+            margin-left: auto;
+            border-right: 0;
+        ` : css`
+            margin-right: auto;
+            border-left: 0;
+        `}
 `
 
 const DiaryContent = styled.div`
@@ -43,6 +52,7 @@ const DiaryContent = styled.div`
     height: 98%;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
     ${(props) =>
         props.isLeft ? css`
             align-items: center;
@@ -56,7 +66,6 @@ const DiaryContent = styled.div`
             border-left: 0;
         `
     }
-    border-radius: 10px;
 `
 
 const VisitorInfo = styled.span`
