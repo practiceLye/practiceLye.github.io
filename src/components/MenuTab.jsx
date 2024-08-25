@@ -1,32 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
+import styled from "styled-components";
 
-const menus = {
-    position: 'absolute',
-    width: '60px',
-    height: '400px',
-    top: '19%',
-    right: '23%'
-}
+const Menus = styled.div`
+    position: absolute;
+    width: 60px;
+    height: 400px;
+    top: 19%;
+    right: 23%;
+`
 
-const tabs = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    width: '60px',
-    height: '30px',
-    fontSize: '0.9rem',
-    border: '2px solid rgb(255, 191, 191)',
-    borderRadius: '5px'
-}
+const Tab = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    background-color: white;
+    width: 70px;
+    height: 32px;
+    font-size: 0.85rem;
+    border: 2px solid rgb(255, 191, 191);
+    border-radius: 5px;
+`
 
 function MenuTab(props) {
-    const [isCurrent, setIsCurrent] = useState(false);
     
     return (
-        <div style={menus}>
-            <div style={tabs}>홈</div>
-        </div>
+        <Menus>
+            {props.menu.map((list)=> {
+                return (<Tab onclick={() => props.menuClick(list)}>{list}</Tab>)
+            })}
+        </Menus>
     );
 }
 
