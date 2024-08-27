@@ -4,6 +4,7 @@ import MenuTab from '../components/MenuTab';
 import bgImage from '../assets/pink-7761356_1920.png';
 import DiaryContainer from '../components/DiaryContainer';
 import ProfileView from './ProfileView';
+import ContentView from './ContentView';
 
 const BgImage = styled.div`
     background-image: url(${bgImage});
@@ -35,6 +36,7 @@ function MainView(props) {
                     visitor={'TODAY 121 | TOTAL. 1555'}
                     title={'블로그 제목'}
                     profile={<ProfileView />}
+                    contents={<ContentView />}
                     menus={<MenuTab menu={['홈','다이어리','프로젝트','방명록']} />}
                 />
                 <BannerContainer></BannerContainer>

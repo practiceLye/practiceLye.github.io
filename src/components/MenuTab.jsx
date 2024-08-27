@@ -4,9 +4,8 @@ import styled from "styled-components";
 const Menus = styled.div`
     position: absolute;
     width: 60px;
-    height: 400px;
     top: 19%;
-    right: 21%;
+    right: 20.2%;
 `
 
 const Tab = styled.div`

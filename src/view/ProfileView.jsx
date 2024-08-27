@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { CgGenderFemale } from "react-icons/cg";
 import { IoMdMusicalNote } from "react-icons/io";
+import { BsFillCaretRightFill, BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 
 const ProfileContent = styled.div`
     width: 100%;
@@ -23,6 +24,7 @@ const TodayMood = styled.div`
         font-size: 0.8rem;
         font-weight: 600;
         margin: 0 0.7rem 0;
+        color: darksalmon;
     }
     & p {
         margin-left: 3px;
@@ -55,10 +57,23 @@ const History = styled.div`
     width: 70%;
     height: 5%;
     border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
+    & svg {
+        width: 0.7rem;
+        height: 0.9rem;
+        color: lightcoral;
+    }
     & span {
         font-size: 0.7rem;
         font-weight: 500;
-        margin-left: 0.5rem;
+    }
+    & div {
+        display: flex;
+        margin-left: auto;
+        & svg {
+            width: 0.8rem;
+            height: 0.8rem;
+            color: gray;
+        }
     }
 `
 
@@ -99,14 +114,21 @@ function ProfileView(props) {
                 <IoMdMusicalNote />
                 <p>즐거움</p>
             </TodayMood>
-            <ProfileImage></ProfileImage>
+            <ProfileImage />
             <Comments>안녕하세요.<br />추억의 싸이월드를<br />참고하여 만든<br />블로그 입니다.</Comments>
             <History>
+                <BsFillCaretRightFill />
                 <span>History</span>
+                <div>
+                    <BsFillCaretDownFill />
+                    <BsFillCaretUpFill />
+                </div>
             </History>
             <Profile>
                 <h4>practiceLye</h4>
-                <div><CgGenderFemale  /></div>
+                <div>
+                    <CgGenderFemale  />
+                </div>
                 <span>fklye0912@gmail.com</span>
             </Profile>
         </ProfileContent>

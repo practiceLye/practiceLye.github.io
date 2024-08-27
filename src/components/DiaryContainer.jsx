@@ -89,15 +89,13 @@ const BlogSubJect = styled.span`
     margin-left: 0.7rem;
     margin-bottom: 0.2rem;
     font-size: 1.2rem;
+    color: darksalmon;
 `
 
 const ContentContainer = styled.div`
     background-color: white;
     width: 98%;
     height: 88%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     position: relative;
